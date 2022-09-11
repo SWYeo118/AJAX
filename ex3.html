@@ -11,10 +11,13 @@
 <body onload="loadData()">
     <script>
       function loadData() {
+        // id 200개짜리 json 데이터를 fetch
         fetch('https://jsonplaceholder.typicode.com/todos/')
           .then(response => response.json())
+          //jsonArray에 집어넣는다.
           .then(jsonArray => {
             let list = $('#list');
+            // jsonArray도 배열이므로 index가 있고, 데이터가 있다. 따라서 data와 index를 선언
             jsonArray.forEach((data, index) => {
               list.append(`<li>${index} : ${data.title}</li>`);
             })
