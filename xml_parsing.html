@@ -13,6 +13,7 @@
 <body onload="loadData()">
   <script>
     function loadData() {
+      // datas.xml로부터 데이터를 fetch
       fetch('datas.xml')
         .then(response => response.text())
         .then(text => $.parseXML(text))
