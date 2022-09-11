@@ -10,10 +10,18 @@
 </head>
 <body>
   <script>
+    // jQuery 사용
     $(function () {
       $('#get_data_button').click(function () {
         // GET 방식
         // $('#demo').load('ajax_info.txt');
+        // getJson으로 people.json 파일에서 데이터를 가져온다.
+        //{
+//         "name": "여상우",
+//         "age": 30,
+//         "skill": "C, Java, Javascript" 
+//         }
+        // function은 console.log 찍기 위해서
         $.getJSON('people.json', function (json) {
           console.log(json);
           // $('#demo').html(JSON.stringify(json));
